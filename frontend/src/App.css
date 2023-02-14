@@ -1,0 +1,234 @@
+p,
+h1,
+h2,
+h3,
+a {
+  color: white;
+}
+.App {
+  background-color: #282c34;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s;
+}
+a:hover {
+  color: #61dafb;
+}
+
+a.active {
+  text-decoration: underline;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding-left: 30px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.form {
+  width: 40%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form__fieldset,
+.form__checkbox-fieldset {
+  position: relative;
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+.form__fieldset {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 25px;
+}
+
+.form__label {
+  color: white;
+  font-size: 17px;
+  margin-bottom: 7px;
+}
+
+.form__input {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #282c34;
+  outline: 1px solid #a0a0a0;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  padding: 10px 12px;
+}
+.form__input:hover {
+  outline: 1px solid white;
+}
+.form__input:focus {
+  outline: 2px solid #80aaff;
+}
+
+.form__select {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #282c34;
+  outline: 1px solid #a0a0a0;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  padding: 10px 12px;
+}
+.form__select:hover {
+  outline: 1px solid white;
+}
+.form__select:focus {
+  outline: 2px solid #80aaff;
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+.form__checkbox {
+  position: relative;
+  margin-right: 13px;
+  outline: none !important;
+}
+
+.form__checkbox::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  width: 15px;
+  height: 15px;
+  background-color: #282c34;
+  border-radius: 3px;
+  border: 1px solid #a0a0a0;
+  transition: all 0.1s;
+  cursor: pointer;
+}
+
+.form__checkbox.error::after {
+  border: 1px solid red;
+}
+
+.form__checkbox:checked:after {
+  background: #80aaff;
+  border: 1px solid #80aaff;
+}
+.form__checkbox:hover:after {
+  border: 1px solid #80aaff;
+}
+
+.form__checkbox-label {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.form__radio {
+  position: relative;
+  margin-right: 13px;
+  outline: none !important;
+}
+
+.form__radio-group {
+  margin-top: 5px;
+  position: relative;
+}
+
+.form__radio::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  width: 15px;
+  height: 15px;
+  background-color: #282c34;
+  border-radius: 50%;
+  border: 1px solid #a0a0a0;
+  transition: all 0.1s;
+  cursor: pointer;
+}
+
+.form__radio.error::after {
+  border: 1px solid red;
+}
+
+.form__radio:checked:after {
+  background: #80aaff;
+  border: 1px solid #80aaff;
+}
+.form__radio:hover:after {
+  border: 1px solid #80aaff;
+}
+
+.form__radio-label {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.form__button {
+  padding: 20px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #6c8fd6;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.3s;
+}
+
+.form__button:hover {
+  background-color: #7a9bdc;
+}
+
+.form__button:disabled {
+  background-color: #747474;
+  cursor: default;
+}
+
+.error {
+  outline: 2px solid red;
+}
+.form__error-label {
+  position: absolute;
+  color: red;
+  margin: 0;
+  bottom: 0;
+}
+
+.flex {
+  display: flex;
+  gap: 30px;
+}
+
+.booking__list {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.error-message {
+  color: red;
+}

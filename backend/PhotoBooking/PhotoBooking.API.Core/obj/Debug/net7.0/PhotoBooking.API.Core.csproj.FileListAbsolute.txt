@@ -1,0 +1,15 @@
+D:\.NETprojects\PhotoBooking\backend\PhotoBooking\PhotoBooking.API.Core\bin\Debug\net7.0\PhotoBooking.API.Core.deps.json
+D:\.NETprojects\PhotoBooking\backend\PhotoBooking\PhotoBooking.API.Core\bin\Debug\net7.0\PhotoBooking.API.Core.dll
+D:\.NETprojects\PhotoBooking\backend\PhotoBooking\PhotoBooking.API.Core\bin\Debug\net7.0\PhotoBooking.API.Core.pdb
+D:\.NETprojects\PhotoBooking\backend\PhotoBooking\PhotoBooking.API.Core\bin\Debug\net7.0\PhotoBooking.API.Data.dll
+D:\.NETprojects\PhotoBooking\backend\PhotoBooking\PhotoBooking.API.Core\bin\Debug\net7.0\PhotoBooking.API.Data.pdb
+D:\.NETprojects\PhotoBooking\backend\PhotoBooking\PhotoBooking.API.Core\obj\Debug\net7.0\PhotoBooking.API.Core.csproj.AssemblyReference.cache
+D:\.NETprojects\PhotoBooking\backend\PhotoBooking\PhotoBooking.API.Core\obj\Debug\net7.0\PhotoBooking.API.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\.NETprojects\PhotoBooking\backend\PhotoBooking\PhotoBooking.API.Core\obj\Debug\net7.0\PhotoBooking.API.Core.AssemblyInfoInputs.cache
+D:\.NETprojects\PhotoBooking\backend\PhotoBooking\PhotoBooking.API.Core\obj\Debug\net7.0\PhotoBooking.API.Core.AssemblyInfo.cs
+D:\.NETprojects\PhotoBooking\backend\PhotoBooking\PhotoBooking.API.Core\obj\Debug\net7.0\PhotoBooking.API.Core.csproj.CoreCompileInputs.cache
+D:\.NETprojects\PhotoBooking\backend\PhotoBooking\PhotoBooking.API.Core\obj\Debug\net7.0\PhotoBooking.API.Core.csproj.CopyComplete
+D:\.NETprojects\PhotoBooking\backend\PhotoBooking\PhotoBooking.API.Core\obj\Debug\net7.0\PhotoBooking.API.Core.dll
+D:\.NETprojects\PhotoBooking\backend\PhotoBooking\PhotoBooking.API.Core\obj\Debug\net7.0\refint\PhotoBooking.API.Core.dll
+D:\.NETprojects\PhotoBooking\backend\PhotoBooking\PhotoBooking.API.Core\obj\Debug\net7.0\PhotoBooking.API.Core.pdb
+D:\.NETprojects\PhotoBooking\backend\PhotoBooking\PhotoBooking.API.Core\obj\Debug\net7.0\ref\PhotoBooking.API.Core.dll
