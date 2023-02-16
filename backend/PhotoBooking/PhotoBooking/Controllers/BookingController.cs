@@ -33,7 +33,6 @@ public class BookingController : ControllerBase
     [FromBody] BookingRequest bookingRequest
   )
   {
-    Console.WriteLine("Email: " + bookingRequest.Email);
     await _repository.AddBooking(bookingRequest.ToBooking());
 
     return Ok(new JsonResult("Booking added"));

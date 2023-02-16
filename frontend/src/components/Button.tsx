@@ -1,15 +1,17 @@
+import { error } from 'console'
 import { MouseEvent, HTMLAttributes } from 'react'
 
 type ButtonProps = {
   title: string
   disabled: boolean
+  error: boolean
 } & HTMLAttributes<HTMLButtonElement>
 
-const Button = ({ title, onClick, disabled, ...props }: ButtonProps) => {
+const Button = ({ error, title, onClick, disabled, ...props }: ButtonProps) => {
   return (
     <button
       {...props}
-      className="form__button"
+      className={`form__button ${error ? 'error' : ''}`}
       onClick={onClick}
       disabled={disabled}
       role="button"

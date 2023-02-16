@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  server-booking:
+    # image: ${DOCKER_REGISTRY-}photobookingapi
+    build:
+      context: ./backend/PhotoBooking
+      dockerfile: Dockerfile
+  client-booking:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+  proxy:
+    build:
+      context: ./
+      dockerfile: proxy.dockerfile

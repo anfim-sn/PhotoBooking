@@ -2,11 +2,9 @@ import axios from 'axios'
 import { FormSend } from '../types/form'
 
 export class ApiService {
-  private static url = 'http://localhost:5194/api/'
+  private static url = 'api/'
 
   static async PostForm(form: FormSend) {
-    console.log(form.from)
-    console.log(form.to)
     try {
       const response = await axios.post(this.url + 'booking', form, {
         headers: { 'Content-Type': 'application/json' },

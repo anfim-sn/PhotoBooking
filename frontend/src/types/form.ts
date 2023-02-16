@@ -2,7 +2,7 @@ export type FormState = {
   name: string
   email: string
   phone: string
-  room: number
+  room: string
   equipment: boolean
   stylist: boolean
   props: boolean
@@ -19,7 +19,7 @@ export type FormValidationSchemeType = {
   name: (value: string) => string
   email: (value: string) => string
   phone: (value: string) => string
-  room: (value: number) => string
+  room: (value: string) => string
   data: (value: string) => string
   fromTime: (value: string) => string
   toTime: (value: string) => string

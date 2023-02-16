@@ -11,7 +11,7 @@ a {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
   transition: all 0.3s;
 }
 a:hover {
@@ -19,7 +19,7 @@ a:hover {
 }
 
 a.active {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .App-header {
@@ -209,7 +209,12 @@ a.active {
   cursor: default;
 }
 
-.error {
+.form__button.error {
+  background-color: rgb(255, 84, 84);
+}
+
+input.error,
+select.error {
   outline: 2px solid red;
 }
 .form__error-label {

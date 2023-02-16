@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { FormEvent, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useApiService } from '../contexts/ServiceContext'
 import { useEffectNoFirstRender } from '../hooks/useEffectNoFirstRender'
@@ -23,19 +23,19 @@ const emailRegExp: RegExp = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g
 const phoneRegExp: RegExp = /^[0-9]{1,13}/
 
 const initialState: FormState = {
-  name: 'sdf',
-  email: 'sa@f.ru',
-  phone: '32323',
-  room: 1,
+  name: '',
+  email: '',
+  phone: '',
+  room: '0',
   equipment: false,
   stylist: false,
   props: false,
   models: false,
-  data: '', //new Date().toString(), //formatToInputDate(new Date(Date.now())),
-  fromTime: '', //new Date().toString(), //formatToInputTime(new Date(Date.now())),
-  toTime: '', //formatToInputTime(new Date(Date.now() + 3600000)),
+  data: formatToInputDate(new Date(Date.now())),
+  fromTime: formatToInputTime(new Date(Date.now())),
+  toTime: formatToInputTime(new Date(Date.now() + 3600000)),
   payment: 'card',
-  terms: true,
+  terms: false,
   spam: true,
 }
 
@@ -61,7 +61,7 @@ const validationScheme: FormValidationSchemeType = {
       : val.match(phoneRegExp) === null
       ? 'Phone should be valid'
       : '',
-  room: val => (val === 0 ? 'Please select a room' : ''),
+  room: val => (val === '0' ? 'Please select a room' : ''),
   data: val =>
     new Date(
       new Date(val).setHours(new Date(Date.now()).getHours())
@@ -69,7 +69,6 @@ const validationScheme: FormValidationSchemeType = {
     Date.now() - 43200000
       ? 'Date cannot be in past'
       : '',
-
   fromTime: val => '',
   toTime: val => '',
   payment: val => (val === '' ? 'Please select a payment method' : ''),
@@ -129,15 +128,30 @@ const Form = () => {
       setFormNetworkStatus(FormNetwrokStatus.SUCCESS)
       navigate('/')
     } catch (err) {
-      console.log(err)
       setFormNetworkStatus(FormNetwrokStatus.ERROR)
     }
   }
 
-  const onFieldChange = ({
-    target: { type, name, value, checked },
-  }: React.ChangeEvent<HTMLInputElement>) => {
-    setForm({ ...form, ...{ [name]: type === 'input' ? value : checked } })
+  function onFieldChange({
+    target,
+  }: FormEvent<HTMLInputElement | HTMLSelectElement>) {
+    console.log(target)
+    if (target instanceof HTMLInputElement) {
+      if (target.type === 'checkbox') {
+        setForm({ ...form, ...{ [target.name]: target.checked } })
+      } else {
+        setForm({
+          ...form,
+          ...{
+            [target.name]: target.value,
+          },
+        })
+      }
+    }
+
+    if (target instanceof HTMLSelectElement) {
+      setForm({ ...form, ...{ [target.name]: target.value } })
+    }
   }
 
   return (
@@ -165,9 +179,8 @@ const Form = () => {
         onChange={onFieldChange}
         error={errors.phone}
         value={form.phone}
-        symbol="+"
       />
-      {/* <SelectField
+      <SelectField
         name="room"
         label="Room"
         options={_options}
@@ -181,25 +194,25 @@ const Form = () => {
           name="equipment"
           label="Equipment"
           onChange={onFieldChange}
-          value={form.equipment}
+          checked={form.equipment}
         />
         <CheckboxField
           name="stylist"
           label="Stylist"
           onChange={onFieldChange}
-          value={form.stylist}
+          checked={form.stylist}
         />
         <CheckboxField
           name="props"
           label="Props and Costumes"
           onChange={onFieldChange}
-          value={form.props}
+          checked={form.props}
         />
         <CheckboxField
           name="models"
           label="Models"
           onChange={onFieldChange}
-          value={form.models}
+          checked={form.models}
         />
       </div>
       <div className="flex">
@@ -232,31 +245,33 @@ const Form = () => {
           { id: 1, value: 'card', label: 'Card' },
           { id: 2, value: 'cash', label: 'Cash' },
         ]}
-       onChange={onFieldChange}
+        onChange={onFieldChange}
         error={errors.payment}
         value={form.payment}
       />
+
       <div>
         <CheckboxField
           name="spam"
           label="Send some spam on my email"
-         onChange={onFieldChange}
-          value={form.spam}
+          onChange={onFieldChange}
+          checked={form.spam}
         />
         <CheckboxField
           name="terms"
           label="I agree with the terms of use of the studio"
-         onChange={onFieldChange}
+          onChange={onFieldChange}
           error={errors.terms}
-          value={form.terms}
+          checked={form.terms}
         />
-      </div> */}
+      </div>
 
       <Button
         id="submit-button"
         disabled={
           formNotValid || formNetworkStatus === FormNetwrokStatus.PENDING
         }
+        error={formNetworkStatus === 'ERROR'}
         title="Send"
         onClick={handleSubmitClick}
       >

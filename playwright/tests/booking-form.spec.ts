@@ -14,7 +14,4 @@ test('test', async ({ page }) => {
   await page.getByLabel('Send some spam on my email').check();
   await page.getByText('I agree with the terms of use of the studio').click();
   await page.click("#submit-button")
-  await page.getByPlaceholder('name').fill('Алексей');
-  await page.getByPlaceholder('email').fill('ale@sdf.ru');
-  await page.getByPlaceholder('phone').fill('89960225434');
 });
