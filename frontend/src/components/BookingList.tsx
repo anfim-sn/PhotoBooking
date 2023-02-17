@@ -13,8 +13,6 @@ export const BookingList = () => {
   const isSuccess = !isLoading && !isError
 
   useEffect(() => {
-    console.log('use effect', search)
-
     api
       .SearchBookings(search)
       .then(data => {
@@ -22,7 +20,6 @@ export const BookingList = () => {
         setIsLoading(false)
       })
       .catch(e => {
-        console.log(e)
         setIsError(e)
       })
       .finally(() => {

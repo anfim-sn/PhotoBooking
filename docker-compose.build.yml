@@ -4,7 +4,7 @@ services:
   server-booking:
     # image: ${DOCKER_REGISTRY-}photobookingapi
     build:
-      context: ./backend/PhotoBooking
+      context: ./backend
       dockerfile: Dockerfile
   client-booking:
     build:

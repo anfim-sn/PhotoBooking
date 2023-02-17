@@ -8,6 +8,7 @@ export class ApiService {
     try {
       const response = await axios.post(this.url + 'booking', form, {
         headers: { 'Content-Type': 'application/json' },
+        timeout: 1500,
       })
       return response.data
     } catch ({ message }) {

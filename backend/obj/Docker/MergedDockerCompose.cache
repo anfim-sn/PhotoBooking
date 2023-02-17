@@ -1,0 +1,46 @@
+name: dockercompose3586650172984233808
+services:
+  backend:
+    build:
+      context: D:\.NETprojects\PhotoBooking\backend\PhotoBooking
+      dockerfile: PhotoBooking/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: photobookingapi
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      published: "7000"
+      protocol: tcp
+  client:
+    build:
+      context: D:\.NETprojects\PhotoBooking\frontend
+      dockerfile: Dockerfile
+    image: client
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 3000
+      published: "7001"
+      protocol: tcp
+  proxy:
+    image: nginx:mainline
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      published: "80"
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: D:\.NETprojects\PhotoBooking\backend\PhotoBooking\nginx.conf
+      target: /etc/nginx/nginx.conf
+      bind:
+        create_host_path: true
+networks:
+  default:
+    name: dockercompose3586650172984233808_default

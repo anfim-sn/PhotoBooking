@@ -13,8 +13,8 @@ function App() {
           <header className="App-header">
             <h2>Studio24</h2>
             <div className="menu">
-              <NavLink to="/booking">Booking</NavLink>
               <NavLink to="/">List</NavLink>
+              <NavLink to="/booking">Booking</NavLink>
             </div>
           </header>
           <Router />
