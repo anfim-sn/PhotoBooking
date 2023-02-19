@@ -16,7 +16,7 @@ This app on my external web server:
 
 ## Stack
 
-- React with Typescript
+- React with Typescript, React Router, Axios
 - C# with ASP.NET Core, InMemory DB, Swagger
 - Docker (with docker-compose), Nginx
 - Playwright
