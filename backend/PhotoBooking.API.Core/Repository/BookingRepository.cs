@@ -21,7 +21,7 @@ public class BookingRepository : IBookingRepository
 
   public async Task<List<Booking>> GetAllBookings()
   {
-    var bookings = await _context.Bookings.ToListAsync();
+    var bookings = await _context.Bookings.Reverse().ToListAsync();
     return bookings;
   }
 

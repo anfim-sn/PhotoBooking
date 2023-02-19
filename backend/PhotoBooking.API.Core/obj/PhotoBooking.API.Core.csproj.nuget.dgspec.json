@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\.NETprojects\\PhotoBooking\\backend\\PhotoBooking\\PhotoBooking.API.Core\\PhotoBooking.API.Core.csproj": {}
+    "D:\\.NETprojects\\PhotoBooking\\backend\\PhotoBooking.API.Core\\PhotoBooking.API.Core.csproj": {}
   },
   "projects": {
-    "D:\\.NETprojects\\PhotoBooking\\backend\\PhotoBooking\\PhotoBooking.API.Core\\PhotoBooking.API.Core.csproj": {
+    "D:\\.NETprojects\\PhotoBooking\\backend\\PhotoBooking.API.Core\\PhotoBooking.API.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.NETprojects\\PhotoBooking\\backend\\PhotoBooking\\PhotoBooking.API.Core\\PhotoBooking.API.Core.csproj",
+        "projectUniqueName": "D:\\.NETprojects\\PhotoBooking\\backend\\PhotoBooking.API.Core\\PhotoBooking.API.Core.csproj",
         "projectName": "PhotoBooking.API.Core",
-        "projectPath": "D:\\.NETprojects\\PhotoBooking\\backend\\PhotoBooking\\PhotoBooking.API.Core\\PhotoBooking.API.Core.csproj",
+        "projectPath": "D:\\.NETprojects\\PhotoBooking\\backend\\PhotoBooking.API.Core\\PhotoBooking.API.Core.csproj",
         "packagesPath": "C:\\Users\\Anfim\\.nuget\\packages\\",
-        "outputPath": "D:\\.NETprojects\\PhotoBooking\\backend\\PhotoBooking\\PhotoBooking.API.Core\\obj\\",
+        "outputPath": "D:\\.NETprojects\\PhotoBooking\\backend\\PhotoBooking.API.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\.NETprojects\\PhotoBooking\\backend\\PhotoBooking\\PhotoBooking.API.Data\\PhotoBooking.API.Data.csproj": {
-                "projectPath": "D:\\.NETprojects\\PhotoBooking\\backend\\PhotoBooking\\PhotoBooking.API.Data\\PhotoBooking.API.Data.csproj"
+              "D:\\.NETprojects\\PhotoBooking\\backend\\PhotoBooking.API.Data\\PhotoBooking.API.Data.csproj": {
+                "projectPath": "D:\\.NETprojects\\PhotoBooking\\backend\\PhotoBooking.API.Data\\PhotoBooking.API.Data.csproj"
               }
             }
           }
@@ -77,14 +77,14 @@
         }
       }
     },
-    "D:\\.NETprojects\\PhotoBooking\\backend\\PhotoBooking\\PhotoBooking.API.Data\\PhotoBooking.API.Data.csproj": {
+    "D:\\.NETprojects\\PhotoBooking\\backend\\PhotoBooking.API.Data\\PhotoBooking.API.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.NETprojects\\PhotoBooking\\backend\\PhotoBooking\\PhotoBooking.API.Data\\PhotoBooking.API.Data.csproj",
+        "projectUniqueName": "D:\\.NETprojects\\PhotoBooking\\backend\\PhotoBooking.API.Data\\PhotoBooking.API.Data.csproj",
         "projectName": "PhotoBooking.API.Data",
-        "projectPath": "D:\\.NETprojects\\PhotoBooking\\backend\\PhotoBooking\\PhotoBooking.API.Data\\PhotoBooking.API.Data.csproj",
+        "projectPath": "D:\\.NETprojects\\PhotoBooking\\backend\\PhotoBooking.API.Data\\PhotoBooking.API.Data.csproj",
         "packagesPath": "C:\\Users\\Anfim\\.nuget\\packages\\",
-        "outputPath": "D:\\.NETprojects\\PhotoBooking\\backend\\PhotoBooking\\PhotoBooking.API.Data\\obj\\",
+        "outputPath": "D:\\.NETprojects\\PhotoBooking\\backend\\PhotoBooking.API.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
