@@ -1,7 +1,8 @@
 ﻿# PhotoBooking
 
-Test task for PlumSail
+Test task for PlumSail 
 
+This app on my external web server:
 - Full app: http://89.108.76.18:8000/
 - Api: http://89.108.76.18:8000/api/
 - Swagger: http://89.108.76.18:8000/swagger/
