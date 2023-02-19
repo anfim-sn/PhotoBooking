@@ -2,9 +2,9 @@
 
 Test task for PlumSail
 
-Full app: http://89.108.76.18:8000/
-Api: http://89.108.76.18:8000/api/
-Swagger: http://89.108.76.18:8000/swagger/
+- Full app: http://89.108.76.18:8000/
+- Api: http://89.108.76.18:8000/api/
+- Swagger: http://89.108.76.18:8000/swagger/
 
 
 ## Docker startup
